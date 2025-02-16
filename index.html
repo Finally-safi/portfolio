@@ -23,35 +23,14 @@
             </div>
         </header>
 
-        <!-- About Section (Full Slider) -->
+        <!-- About Section (Join Server Button UI) -->
         <section class="about">
             <h2>Join Our Community</h2>
-            <div class="slider-container">
-                <div class="slider">
-                    <!-- Slide 1: Server Info -->
-                    <div class="slide">
-                        <img src="server-image1.jpg" alt="Server Image 1" class="server-image">
-                        <h3>Server Name: The Chill Hub</h3>
-                        <p>Join a community of like-minded individuals. Share, learn, and grow with us!</p>
-                        <a href="https://discord.gg/yourserverlink" target="_blank" class="join-btn">Join Server</a>
-                    </div>
-                    <!-- Slide 2: Server Info -->
-                    <div class="slide">
-                        <img src="server-image2.jpg" alt="Server Image 2" class="server-image">
-                        <h3>Server Name: The Chill Hub</h3>
-                        <p>Welcome to a place where you can relax and meet new friends. We're here to help!</p>
-                        <a href="https://discord.gg/yourserverlink" target="_blank" class="join-btn">Join Server</a>
-                    </div>
-                    <!-- Slide 3: Server Info -->
-                    <div class="slide">
-                        <img src="server-image3.jpg" alt="Server Image 3" class="server-image">
-                        <h3>Server Name: The Chill Hub</h3>
-                        <p>Looking for a chill space? Come join us for fun, learning, and exciting events!</p>
-                        <a href="https://discord.gg/yourserverlink" target="_blank" class="join-btn">Join Server</a>
-                    </div>
-                </div>
-                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            <div class="server-info">
+                <img src="server-image.jpg" alt="Server Image" class="server-image">
+                <h3>Server Name: The Chill Hub</h3>
+                <p>Join a community of like-minded individuals. Share, learn, and grow with us!</p>
+                <a href="https://discord.gg/yourserverlink" target="_blank" class="join-btn">Join Server</a>
             </div>
         </section>
 
@@ -80,26 +59,6 @@
                 document.getElementById('birthday-countdown').innerHTML = "Happy Birthday!";
             }
         }, 1000);
-
-        // Image Slider
-        let slideIndex = 0;
-
-        function moveSlide(step) {
-            const slides = document.getElementsByClassName("slide");
-            slideIndex += step;
-
-            if (slideIndex >= slides.length) slideIndex = 0;
-            if (slideIndex < 0) slideIndex = slides.length - 1;
-
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-
-            slides[slideIndex].style.display = "block";
-        }
-
-        // Initial Display
-        moveSlide(0);
     </script>
 </body>
 </html>
