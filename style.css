@@ -1,4 +1,3 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,112 +6,120 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
     line-height: 1.6;
 }
 
 .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 80%;
+    margin: auto;
     padding: 20px;
 }
 
-/* Hero Section */
-header.hero {
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 50px 0;
-    background-color: #e8e8e8;
+    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
-    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.hero-content {
+    max-width: 600px;
 }
 
 .profile-photo {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    object-fit: cover;
+    border: 5px solid #fff;
     margin-bottom: 20px;
 }
 
 h1 {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    color: #fff;
 }
 
 .tagline {
-    font-size: 18px;
-    color: #777;
+    font-size: 1.2rem;
+    color: #ddd;
     margin-bottom: 20px;
 }
 
 .details p {
-    font-size: 16px;
-    color: #555;
+    font-size: 1rem;
+    margin-bottom: 5px;
 }
 
-/* About Section */
-section.about {
+.about {
+    margin: 40px 0;
     text-align: center;
-    margin-bottom: 40px;
 }
 
-section.about h2 {
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 20px;
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
 }
 
-section.about p {
-    font-size: 18px;
-    color: #555;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: 0 auto;
+.about p {
+    font-size: 1.2rem;
+    color: #ccc;
 }
 
-/* Join Server Section */
 .join-server {
     text-align: center;
     margin-top: 40px;
 }
 
-.join-server h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-/* Join Button Styling */
 .join-btn {
-    background-color: #6A4CFF; /* Purple color */
+    background-color: #6a11cb;  /* Purple background */
     color: white;
-    font-size: 16px;
-    padding: 12px 25px;
     border: none;
-    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
     cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: bold;
-    text-transform: uppercase;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out; /* Added transition for scaling effect */
+    position: relative;
+    overflow: hidden;
 }
 
 .join-btn:hover {
-    background-color: #5b3de0; /* Slightly darker purple for hover */
-    transform: translateY(-3px); /* Slight lift on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background-color: #5a0eaf;  /* Darker purple on hover */
 }
 
 .join-btn:active {
-    background-color: #4a2cbf; /* Darker purple when button is pressed */
-    transform: translateY(0); /* Remove lift when clicked */
+    transform: scale(0.95);  /* Tap animation: scales down when clicked */
 }
 
+.join-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: #fff;
+    transition: width 0.4s, height 0.4s, top 0.4s, left 0.4s;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.join-btn:active::after {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+}
+ 
 footer {
     text-align: center;
     margin-top: 40px;
-    font-size: 16px;
-    color: #777;
+    font-size: 1rem;
+    color: #ddd;
 }
