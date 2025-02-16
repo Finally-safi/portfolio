@@ -16,6 +16,45 @@ function updateCountdown() {
     }
 }
 
+/* Slider Container */
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+button.prev {
+    left: 0;
+}
+
+button.next {
+    right: 0;
+}
+
 // Update countdown on page load
 updateCountdown();
 // Update countdown every 24 hours
