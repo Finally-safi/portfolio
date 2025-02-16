@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="safi-photo.jpg">
     <title>Safi's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
@@ -23,42 +22,25 @@
             </div>
         </header>
 
-        <!-- About Section (Join Server Button UI) -->
+        <!-- About Section -->
         <section class="about">
-            <h2>Join Our Community</h2>
-            <div class="server-info">
-                <img src="server-image.jpg" alt="Server Image" class="server-image">
-                <h3>Server Name: The Chill Hub</h3>
-                <p>Join a community of like-minded individuals. Share, learn, and grow with us!</p>
-                <a href="https://discord.gg/yourserverlink" target="_blank" class="join-btn">Join Server</a>
-            </div>
+            <h2>About Me</h2>
+            <p>Hi, I'm Safi, a student from Bangladesh. I'm passionate about learning new things, technology, and making friends. Always eager to grow and explore new opportunities.</p>
+        </section>
+
+        <!-- Join Server Section -->
+        <section class="join-server">
+            <h2>Join My Server</h2>
+            <button class="join-btn" onclick="window.open('https://discord.com/invite/kSHqYyaHtA', '_blank')">Join the Server</button>
         </section>
 
         <!-- Footer -->
         <footer>
-            <p>&copy; 2025 Safi's Portfolio</p>
+            <p>Thank You ❤️</p>
         </footer>
     </div>
 
-    <script>
-        // Countdown Timer
-        const birthday = new Date('July 28, 2025 00:00:00').getTime();
-        const countdownTimer = setInterval(function() {
-            const now = new Date().getTime();
-            const timeLeft = birthday - now;
-
-            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-            document.getElementById('birthday-countdown').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-            if (timeLeft < 0) {
-                clearInterval(countdownTimer);
-                document.getElementById('birthday-countdown').innerHTML = "Happy Birthday!";
-            }
-        }, 1000);
-    </script>
+    <!-- JavaScript for Countdown -->
+    <script src="script.js"></script>
 </body>
 </html>
